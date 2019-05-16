@@ -1,0 +1,66 @@
+#!/usr/bin/ruby
+
+require 'json'
+
+platform = ARGV[0]
+unless platform == "all" || platform == "chrome" || platform == "safari"
+    puts "Please specify which platforms to build (all/chrome/safari)"
+    exit(-1)
+end
+    
+script_path = File.expand_path(File.dirname(__FILE__))
+
+puts "Loading configuration..."
+
+configuration = JSON.parse(File.read("#{script_path}/configuration.json"))
+
+raise "no domains set in configuration file!" unless configuration.key?("domains")
+raise "no powders set in configuration file!" unless configuration.key?("powders")
+if platform == "all" || platform == "safari"
+    raise "invalid development team in configuration file!" unless configuration.key?("apple_dev_team") && configuration["apple_dev_team"].length == 10
+end
+
+puts "Writing configuration..."
+
+powder_js_path = "#{script_path}/ChromeExtension/pmgh.js"
+script_start_marker = "function inject_changes(configuration)"
+powder_js_split = File.read(powder_js_path).split(script_start_marker)
+
+raise "splitting failed" unless powder_js_split.count == 2
+
+powder_js_split[0] = "var inject_configuration = #{configuration["powders"].to_json}\n\n"
+
+File.write(powder_js_path, powder_js_split.join(script_start_marker))
+
+if platform == "all" || platform == "chrome"
+    puts "Packing Chrome extension..."
+
+    chrome_manifest_path = "#{script_path}/ChromeExtension/manifest.json"
+    chrome_manifest = JSON.parse(File.read(chrome_manifest_path))
+    chrome_manifest["content_scripts"][0]["matches"] = configuration["domains"].map { |x| "https://#{x}/*" }
+    File.write(chrome_manifest_path, chrome_manifest.to_json)
+    
+    system("zip -j -r '#{script_path}/ChromeExtension.zip' '#{script_path}/ChromeExtension' -x '*.DS_Store' > /dev/null")    
+end
+
+if platform == "all" || platform == "safari"
+    puts "Building Safari App Extension..."
+
+    infoplist_path = "#{script_path}/SafariExtension/GitHub PowdeR Extension/Info.plist"
+    info_plist = File.read(infoplist_path)
+
+    # to avoid adding dependencies to external gems to handle plist we find/replace
+    # while this is ugly it gets the job done
+    domains = configuration["domains"].map { |x| "\t\t\t\t<string>#{x}</string>" }
+    info_plist.gsub!("\t\t\t\t<string>github.com</string>", domains.join("\n"))
+    File.write(infoplist_path, info_plist)
+
+    system("cd '#{script_path}/SafariExtension'; xcodebuild archive -scheme 'GitHub PowdeR' -configuration Release -archivePath build/archive.xcarchive DEVELOPMENT_TEAM=#{configuration["apple_dev_team"]}")
+    system("cd '#{script_path}/SafariExtension'; xcodebuild -exportArchive -archivePath build/archive.xcarchive -exportPath build -exportOptionsPlist ExportOptions.plist")
+    
+    system("cp -r '#{script_path}/SafariExtension/build/GitHub PowdeR.app' '#{script_path}'")    
+end
+
+system("git checkout -- 'SafariExtension/GitHub PowdeR Extension/Info.plist'")
+system("git checkout -- 'ChromeExtension/pmgh.js'")
+system("git checkout -- 'ChromeExtension/manifest.json'")

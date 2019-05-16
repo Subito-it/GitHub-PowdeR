@@ -1,0 +1,9 @@
+{
+  "domains": ["github.com"],
+  "apple_dev_team": "your 10 digit developer team id",
+  "powders": {
+    "xib files": ["\\.xib", "\\.nib"],
+    "project files": ["\\.pbxproj"],
+    "asset files": ["\\.xcassets/"]    
+  }
+}

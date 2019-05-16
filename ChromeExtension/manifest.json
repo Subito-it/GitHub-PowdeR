@@ -1,0 +1,14 @@
+{
+  "manifest_version": 2,
+  "name": "GitHub PowdeR",
+  "description": "Add buttons to selectively remove files from the list of reviewable items in a PR",
+  "version": "0.1",
+  "content_scripts": [
+    {
+      "matches": [
+        "https://github.com/*"
+      ],
+      "js": ["pmgh.js"]
+    }
+  ]
+}

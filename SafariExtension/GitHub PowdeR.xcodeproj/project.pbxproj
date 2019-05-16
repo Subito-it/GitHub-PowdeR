@@ -1,0 +1,510 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 50;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		C3D8584F228CAC73001F3E7D /* GitHub_PowdeR.entitlements in Resources */ = {isa = PBXBuildFile; fileRef = C3D8584E228CAC73001F3E7D /* GitHub_PowdeR.entitlements */; };
+		C3D85851228CAC73001F3E7D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3D85850228CAC73001F3E7D /* AppDelegate.swift */; };
+		C3D85854228CAC73001F3E7D /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C3D85852228CAC73001F3E7D /* Main.storyboard */; };
+		C3D85856228CAC73001F3E7D /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3D85855228CAC73001F3E7D /* ViewController.swift */; };
+		C3D85858228CAC74001F3E7D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C3D85857228CAC74001F3E7D /* Assets.xcassets */; };
+		C3D8585F228CAC74001F3E7D /* GitHub PowdeR Extension.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = C3D8585E228CAC74001F3E7D /* GitHub PowdeR Extension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		C3D85864228CAC74001F3E7D /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C3D85863228CAC74001F3E7D /* Cocoa.framework */; };
+		C3D85867228CAC74001F3E7D /* SafariExtensionHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3D85866228CAC74001F3E7D /* SafariExtensionHandler.swift */; };
+		C3D85869228CAC74001F3E7D /* SafariExtensionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3D85868228CAC74001F3E7D /* SafariExtensionViewController.swift */; };
+		C3D8586C228CAC74001F3E7D /* SafariExtensionViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = C3D8586A228CAC74001F3E7D /* SafariExtensionViewController.xib */; };
+		C3D8587F228CADCD001F3E7D /* pmgh.js in Resources */ = {isa = PBXBuildFile; fileRef = C3D8587E228CADCD001F3E7D /* pmgh.js */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		C3D85860228CAC74001F3E7D /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = C3D85843228CAC73001F3E7D /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = C3D8585D228CAC74001F3E7D;
+			remoteInfo = "GitHub PowdeR Extension";
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		C3D85878228CAC74001F3E7D /* Embed App Extensions */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 13;
+			files = (
+				C3D8585F228CAC74001F3E7D /* GitHub PowdeR Extension.appex in Embed App Extensions */,
+			);
+			name = "Embed App Extensions";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
+/* Begin PBXFileReference section */
+		C3D8584B228CAC73001F3E7D /* GitHub PowdeR.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "GitHub PowdeR.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		C3D8584E228CAC73001F3E7D /* GitHub_PowdeR.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = GitHub_PowdeR.entitlements; sourceTree = "<group>"; };
+		C3D85850228CAC73001F3E7D /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		C3D85853228CAC73001F3E7D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		C3D85855228CAC73001F3E7D /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		C3D85857228CAC74001F3E7D /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		C3D85859228CAC74001F3E7D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		C3D8585E228CAC74001F3E7D /* GitHub PowdeR Extension.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = "GitHub PowdeR Extension.appex"; sourceTree = BUILT_PRODUCTS_DIR; };
+		C3D85863228CAC74001F3E7D /* Cocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Cocoa.framework; path = System/Library/Frameworks/Cocoa.framework; sourceTree = SDKROOT; };
+		C3D85866228CAC74001F3E7D /* SafariExtensionHandler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SafariExtensionHandler.swift; sourceTree = "<group>"; };
+		C3D85868228CAC74001F3E7D /* SafariExtensionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SafariExtensionViewController.swift; sourceTree = "<group>"; };
+		C3D8586B228CAC74001F3E7D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/SafariExtensionViewController.xib; sourceTree = "<group>"; };
+		C3D8586D228CAC74001F3E7D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		C3D85872228CAC74001F3E7D /* GitHub_PowdeR_Extension.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = GitHub_PowdeR_Extension.entitlements; sourceTree = "<group>"; };
+		C3D8587E228CADCD001F3E7D /* pmgh.js */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.javascript; name = pmgh.js; path = ../../ChromeExtension/pmgh.js; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		C3D85848228CAC73001F3E7D /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		C3D8585B228CAC74001F3E7D /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C3D85864228CAC74001F3E7D /* Cocoa.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		C3D85842228CAC73001F3E7D = {
+			isa = PBXGroup;
+			children = (
+				C3D8584D228CAC73001F3E7D /* GitHub PowdeR */,
+				C3D85865228CAC74001F3E7D /* GitHub PowdeR Extension */,
+				C3D85862228CAC74001F3E7D /* Frameworks */,
+				C3D8584C228CAC73001F3E7D /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		C3D8584C228CAC73001F3E7D /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				C3D8584B228CAC73001F3E7D /* GitHub PowdeR.app */,
+				C3D8585E228CAC74001F3E7D /* GitHub PowdeR Extension.appex */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		C3D8584D228CAC73001F3E7D /* GitHub PowdeR */ = {
+			isa = PBXGroup;
+			children = (
+				C3D8584E228CAC73001F3E7D /* GitHub_PowdeR.entitlements */,
+				C3D85850228CAC73001F3E7D /* AppDelegate.swift */,
+				C3D85852228CAC73001F3E7D /* Main.storyboard */,
+				C3D85855228CAC73001F3E7D /* ViewController.swift */,
+				C3D85857228CAC74001F3E7D /* Assets.xcassets */,
+				C3D85859228CAC74001F3E7D /* Info.plist */,
+			);
+			path = "GitHub PowdeR";
+			sourceTree = "<group>";
+		};
+		C3D85862228CAC74001F3E7D /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				C3D85863228CAC74001F3E7D /* Cocoa.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		C3D85865228CAC74001F3E7D /* GitHub PowdeR Extension */ = {
+			isa = PBXGroup;
+			children = (
+				C3D85866228CAC74001F3E7D /* SafariExtensionHandler.swift */,
+				C3D85868228CAC74001F3E7D /* SafariExtensionViewController.swift */,
+				C3D8586A228CAC74001F3E7D /* SafariExtensionViewController.xib */,
+				C3D8587E228CADCD001F3E7D /* pmgh.js */,
+				C3D8586D228CAC74001F3E7D /* Info.plist */,
+				C3D85872228CAC74001F3E7D /* GitHub_PowdeR_Extension.entitlements */,
+			);
+			path = "GitHub PowdeR Extension";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		C3D8584A228CAC73001F3E7D /* GitHub PowdeR */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = C3D85879228CAC74001F3E7D /* Build configuration list for PBXNativeTarget "GitHub PowdeR" */;
+			buildPhases = (
+				C3D85847228CAC73001F3E7D /* Sources */,
+				C3D85848228CAC73001F3E7D /* Frameworks */,
+				C3D85849228CAC73001F3E7D /* Resources */,
+				C3D85878228CAC74001F3E7D /* Embed App Extensions */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				C3D85861228CAC74001F3E7D /* PBXTargetDependency */,
+			);
+			name = "GitHub PowdeR";
+			productName = "GitHub PowdeR";
+			productReference = C3D8584B228CAC73001F3E7D /* GitHub PowdeR.app */;
+			productType = "com.apple.product-type.application";
+		};
+		C3D8585D228CAC74001F3E7D /* GitHub PowdeR Extension */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = C3D85875228CAC74001F3E7D /* Build configuration list for PBXNativeTarget "GitHub PowdeR Extension" */;
+			buildPhases = (
+				C3D8585A228CAC74001F3E7D /* Sources */,
+				C3D8585B228CAC74001F3E7D /* Frameworks */,
+				C3D8585C228CAC74001F3E7D /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "GitHub PowdeR Extension";
+			productName = "GitHub PowdeR Extension";
+			productReference = C3D8585E228CAC74001F3E7D /* GitHub PowdeR Extension.appex */;
+			productType = "com.apple.product-type.app-extension";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		C3D85843228CAC73001F3E7D /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 1020;
+				LastUpgradeCheck = 1020;
+				ORGANIZATIONNAME = tomas;
+				TargetAttributes = {
+					C3D8584A228CAC73001F3E7D = {
+						CreatedOnToolsVersion = 10.2.1;
+					};
+					C3D8585D228CAC74001F3E7D = {
+						CreatedOnToolsVersion = 10.2.1;
+					};
+				};
+			};
+			buildConfigurationList = C3D85846228CAC73001F3E7D /* Build configuration list for PBXProject "GitHub PowdeR" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = C3D85842228CAC73001F3E7D;
+			productRefGroup = C3D8584C228CAC73001F3E7D /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				C3D8584A228CAC73001F3E7D /* GitHub PowdeR */,
+				C3D8585D228CAC74001F3E7D /* GitHub PowdeR Extension */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		C3D85849228CAC73001F3E7D /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C3D8584F228CAC73001F3E7D /* GitHub_PowdeR.entitlements in Resources */,
+				C3D85858228CAC74001F3E7D /* Assets.xcassets in Resources */,
+				C3D85854228CAC73001F3E7D /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		C3D8585C228CAC74001F3E7D /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C3D8587F228CADCD001F3E7D /* pmgh.js in Resources */,
+				C3D8586C228CAC74001F3E7D /* SafariExtensionViewController.xib in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		C3D85847228CAC73001F3E7D /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C3D85856228CAC73001F3E7D /* ViewController.swift in Sources */,
+				C3D85851228CAC73001F3E7D /* AppDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		C3D8585A228CAC74001F3E7D /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C3D85869228CAC74001F3E7D /* SafariExtensionViewController.swift in Sources */,
+				C3D85867228CAC74001F3E7D /* SafariExtensionHandler.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		C3D85861228CAC74001F3E7D /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = C3D8585D228CAC74001F3E7D /* GitHub PowdeR Extension */;
+			targetProxy = C3D85860228CAC74001F3E7D /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		C3D85852228CAC73001F3E7D /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				C3D85853228CAC73001F3E7D /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		C3D8586A228CAC74001F3E7D /* SafariExtensionViewController.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				C3D8586B228CAC74001F3E7D /* Base */,
+			);
+			name = SafariExtensionViewController.xib;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		C3D85873228CAC74001F3E7D /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "Mac Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.14;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = macosx;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		C3D85874228CAC74001F3E7D /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "Mac Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.14;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = macosx;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+			};
+			name = Release;
+		};
+		C3D85876228CAC74001F3E7D /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_ENTITLEMENTS = "GitHub PowdeR Extension/GitHub_PowdeR_Extension.entitlements";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = F93T2PM4GE;
+				INFOPLIST_FILE = "GitHub PowdeR Extension/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+					"@executable_path/../../../../Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "com.subito.GitHub-PowdeR-Extension";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 5.0;
+			};
+			name = Debug;
+		};
+		C3D85877228CAC74001F3E7D /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_ENTITLEMENTS = "GitHub PowdeR Extension/GitHub_PowdeR_Extension.entitlements";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = F93T2PM4GE;
+				INFOPLIST_FILE = "GitHub PowdeR Extension/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+					"@executable_path/../../../../Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "com.subito.GitHub-PowdeR-Extension";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 5.0;
+			};
+			name = Release;
+		};
+		C3D8587A228CAC74001F3E7D /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = "GitHub PowdeR/GitHub_PowdeR.entitlements";
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				DEVELOPMENT_TEAM = F93T2PM4GE;
+				INFOPLIST_FILE = "GitHub PowdeR/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "com.subito.GitHub-PowdeR";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+			};
+			name = Debug;
+		};
+		C3D8587B228CAC74001F3E7D /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = "GitHub PowdeR/GitHub_PowdeR.entitlements";
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				DEVELOPMENT_TEAM = F93T2PM4GE;
+				INFOPLIST_FILE = "GitHub PowdeR/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "com.subito.GitHub-PowdeR";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		C3D85846228CAC73001F3E7D /* Build configuration list for PBXProject "GitHub PowdeR" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				C3D85873228CAC74001F3E7D /* Debug */,
+				C3D85874228CAC74001F3E7D /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		C3D85875228CAC74001F3E7D /* Build configuration list for PBXNativeTarget "GitHub PowdeR Extension" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				C3D85876228CAC74001F3E7D /* Debug */,
+				C3D85877228CAC74001F3E7D /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		C3D85879228CAC74001F3E7D /* Build configuration list for PBXNativeTarget "GitHub PowdeR" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				C3D8587A228CAC74001F3E7D /* Debug */,
+				C3D8587B228CAC74001F3E7D /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = C3D85843228CAC73001F3E7D /* Project object */;
+}
